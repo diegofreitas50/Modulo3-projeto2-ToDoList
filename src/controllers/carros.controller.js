@@ -49,10 +49,10 @@ const createCarroController = async (req, res) => {
   res.status(201).send(newCarro);
 };
 
-const updateCarroController = (req, res) => {
-  const idParam = +req.params.id;
+const updateCarroController = async (req, res) => {
+  const idParam = req.params.id;
 
-  if (!idParam) {
+  if (!mongoose.Types.ObjectId.isValid(idParam)) {
     return res.status(400).send({ message: 'Id inválido!' });
   }
 
@@ -72,24 +72,18 @@ const updateCarroController = (req, res) => {
     });
   }
 
-  const updatedCarro = carrosServices.updateCarroService(idParam, carroEdit);
+  const updatedCarro = await carrosServices.updateCarroService(idParam, carroEdit);
   res.send(updatedCarro);
 };
 
-const deleteCarroController = (req, res) => {
-  const idParam = +req.params.id;
+const deleteCarroController = async (req, res) => {
+  const idParam = req.params.id;
 
-  if (!idParam) {
+  if (!mongoose.Types.ObjectId.isValid(idParam)) {
     return res.status(400).send({ message: 'Id inválido!' });
   }
-
-  const chosenCarro = carrosServices.carroByIdService(idParam);
-
-  if (!chosenCarro) {
-    return res.status(404).send({ message: 'Carro não encontrado!' });
-  }
-
-  carrosServices.deleteCarroService(idParam);
+  
+  await carrosServices.deleteCarroService(idParam);
   res.send({ message: 'Carro deletado com sucesso!' });
 };
 

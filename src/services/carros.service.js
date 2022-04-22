@@ -16,16 +16,13 @@ const createCarroService = async (newCarro) => {
     return carroCreated;
 };
 
-const updateCarroService = (id, carroEdited) => {
-    carroEdited['id'] = id;
-    const carroIndex = carros.findIndex((carro) => carro.id == id);
-    carros[carroIndex] = carroEdited;
+const updateCarroService = async (id, carroEdited) => {
+    const carroUpdate = await Carros.findByIdAndUpdate(id, carroEdited)
     return carroEdited;
 };
 
-const deleteCarroService = (id) => {
-    const carroIndex = carros.findIndex((carro) => carro.id == id);
-    return carros.splice(carroIndex, 1);
+const deleteCarroService = async (id) => {
+    return await Carros.findByIdAndDelete(id)
 };
 
 module.exports = {
