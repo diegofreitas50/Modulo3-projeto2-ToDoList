@@ -1,0 +1,23 @@
+[
+  {
+    "modelo": "Gol 1.0",
+    "cor": "preto",
+    "marca": "Volkswagen",
+    "ano": 2012,
+    "foto": "assets/images/gol.png"
+  },
+  {
+    "modelo": "Prisma LTZ 1.4",
+    "cor": "branco",
+    "marca": "Chevrolet",
+    "ano": 2018,
+    "foto": "assets/images/prisma.png"
+  },
+  {
+    "modelo": "Corolla XEI 2.0",
+    "cor": "preto",
+    "marca": "Toyota",
+    "ano": 2012,
+    "foto": "assets/images/corolla.png"
+  }
+]

@@ -1,0 +1,30 @@
+{
+  "name": "modulo3-projeto2-todolist",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index",
+    "dev": "nodemon index"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/diegofreitas50/Modulo3-projeto2-ToDoList.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/diegofreitas50/Modulo3-projeto2-ToDoList/issues"
+  },
+  "homepage": "https://github.com/diegofreitas50/Modulo3-projeto2-ToDoList#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.17.3",
+    "mongoose": "^6.3.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  }
+}
