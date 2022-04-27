@@ -1,4 +1,3 @@
-const Carro = require('../models/Carro');
 const Carros = require('../models/Carro');
 
 const allCarrosService = async () => {
