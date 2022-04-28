@@ -1,6 +1,5 @@
 const carrosServices = require('../services/carros.service');
-const mogoose = require('mongoose');
-const { default: mongoose } = require('mongoose');
+const mongoose = require('mongoose');
 
 const allCarrosController = async (req, res) => {
   const allCarros = await carrosServices.allCarrosService();
